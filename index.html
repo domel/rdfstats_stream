@@ -12,15 +12,12 @@
             radial-gradient(800px 400px at 50% 90%, rgba(59,130,246,0.10), transparent 55%);
       --card-bg: rgba(255,255,255,0.86);
       --text: #0f172a;
-      --muted: #334155;
-      --accent: #6366f1;
       --shadow: 0 10px 30px rgba(2,6,23,0.15);
     }
     @media (prefers-color-scheme: dark) {
       :root {
         --card-bg: rgba(2,6,23,0.75);
         --text: #e5e7eb;
-        --muted: #94a3b8;
         --shadow: 0 12px 36px rgba(0,0,0,0.55);
       }
     }
@@ -66,12 +63,6 @@
       text-wrap: balance;
     }
 
-    .subtitle {
-      margin: 0 0 16px 0;
-      font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
-      color: var(--muted);
-    }
-
     .video-shell {
       margin-top: 12px;
       border-radius: 18px;
@@ -81,68 +72,11 @@
       box-shadow: 0 10px 24px rgba(2,6,23,0.3);
     }
 
-    /* Maintain 16:9 ratio and make iframe fill */
     .video-frame {
       width: 100%;
       aspect-ratio: 16 / 9;
       display: block;
       border: 0;
-    }
-
-    .helper {
-      margin-top: 14px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .kbd {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      background: rgba(2,6,23,0.08);
-      border: 1px solid rgba(148,163,184,0.35);
-      padding: 0.12rem 0.45rem;
-      border-radius: 8px;
-      font-size: 0.9em;
-      color: var(--text);
-      white-space: nowrap;
-    }
-
-    .footer {
-      margin-top: 18px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-    .btn {
-      --btn-bg: #111827;
-      --btn-fg: #e5e7eb;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.0)) , var(--btn-bg);
-      color: var(--btn-fg);
-      padding: 10px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(148,163,184,0.35);
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 0.2px;
-      transition: transform .12s ease, opacity .12s ease, box-shadow .2s ease;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    }
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.35);
-      opacity: 0.95;
-    }
-    .btn .dot {
-      width: 8px;
-      height: 8px;
-      background: var(--accent);
-      border-radius: 999px;
-      box-shadow: 0 0 0 3px rgba(99,102,241,0.25);
     }
 
     .glow {
@@ -162,30 +96,28 @@
       <div class="glow"></div>
       <h1 id="video-title" class="title">Scalable RDF Statistics: Streaming Analysis of Billion-Triple Graphs</h1>
 
-      <div class="video-shell" aria-label="YouTube video player">
-        <iframe
+      <div class="video-shell" aria-label="HTML5 video player">
+        <video
           class="video-frame"
-          src="_"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          referrerpolicy="strict-origin-when-cross-origin">
-        </iframe>
+          controls
+          preload="metadata"
+          playsinline
+          poster="./video/m.png"
+          aria-label="Scalable RDF Statistics: Streaming Analysis of Billion-Triple Graphs">
+          <source src="./video/video_high.mp4" type="video/mp4">
+          <source src="./video/video_low.mkv" type="video/x-matroska">
+          Your browser does not support HTML5 video.
+        </video>
         <noscript>
           <div style="padding:12px;color:#e5e7eb;">
-            
-            <a href="_" style="color:#93c5fd">video</a>.
+            JavaScript is disabled. Download and play locally:
+            <a href="./video/video_high.mp4" style="color:#93c5fd">MP4 (large size)</a> or
+            <a href="./video/video_low.mkv" style="color:#93c5fd">MKV (small size)</a>.
           </div>
         </noscript>
-      </div>
-
-      <div class="footer">
-        <a class="btn" href="https://www.youtube.com" target="_blank" rel="noopener">
-          <span class="dot" aria-hidden="true"></span>
-          Open on YouTube
-        </a>
       </div>
     </section>
   </main>
 </body>
 </html>
+
