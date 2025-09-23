@@ -4,13 +4,7 @@ A lightweight, single-file Python tool for **streaming analysis of very large RD
 
 > **Why this tool?** When your data is tens of gigabytes to billions of triples, loading into a triplestore just to compute descriptive statistics is impractical. This script streams, sorts externally on disk, and aggregates efficiently—so you can **measure before you model**.
 
-<p align="center">
-  <video controls playsinline preload="metadata" width="800">
-    <source src="video/video_high.mp4?raw=1" type="video/mp4" />
-    Your browser does not support HTML5 video. 
-    <a href="video/video_high.mp4?raw=1">Open video</a>.
-  </video>
-</p>
+➡️ [View the demo](https://domel.github.io/rdfstats_stream/)
 
 ---
 
